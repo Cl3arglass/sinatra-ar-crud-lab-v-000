@@ -1,0 +1,20 @@
+
+<h3>Name: <%= @post.name %></h3><br>
+<h4>Content: <%= @post.content %></h4>
+
+<form action="/posts/:id" method="post">
+    <input id="hidden" type="hidden" name="_method" value="patch">
+    <!-- <input type="text" ...> -->
+    
+    <label>Post Name:</label>
+    <input id="name" type="text" name="params[:post].name" >
+    <br>
+    <label>Post Content:</label>
+    <input id="content" type="text" name="params[:post].content" >
+     
+
+
+
+
+    <button type="submit" value="submit">submit</button>
+</form>
